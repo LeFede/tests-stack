@@ -23,6 +23,10 @@ describe("Stack", () => {
     expect(stack.top).toBe(1)
     expect(stack.items[0]).toBe("Item 0")
     expect(stack.items[1]).toBe("Item 1")
+    expect(stack.items).toEqual({
+      0: "Item 0",
+      1: "Item 1"
+    })
   })
 
   it("pop() correctly pops elements", () => {
@@ -32,6 +36,10 @@ describe("Stack", () => {
     stack.push("Item 0")
     stack.push("Item 1")
     expect(stack.top).toBe(1)
+    expect(stack.items).toEqual({
+      0: "Item 0",
+      1: "Item 1"
+    })
   })
 
   it("push() throws an error with the message 'Only strings allowed' when the argument is not a string", () => {
@@ -52,5 +60,8 @@ describe("Stack", () => {
     expect(stack.peek()).toBe("Item 1")
     stack.pop()
     expect(stack.peek()).toBe("Item 0")
+    expect(stack.items).toEqual({
+      0: "Item 0"
+    })
   })
 })

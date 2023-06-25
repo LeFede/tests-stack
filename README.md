@@ -2,11 +2,14 @@
 ### Steps:
 ```
 npm i 
-npm run test
+npm test
 ```
 
 ### UwU
-You have to simulate a Stack Data Structure without using arrays at all. Use the property **top** to keep track of the current index (the top of the stack). You must initialize it as -1 meaning that it doesn't  have any starting items. 
+You have to simulate a Stack Data Structure without using arrays at all. 
+</br>
+Use the property **top** to keep track of the current index (the top of the stack). You must initialize it as -1 meaning that it doesn't  have any starting items. 
+</br>
 Next, use the property **items** to store all the stack items. You must initialize it as an empty object.
 Finally, create the **push**, **pop** and **peek** methods with the following rules:
 - Push must only receive a **string** as an argument. If it is not a string, it throws an error saying "**Only strings allowed**"
