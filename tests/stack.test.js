@@ -8,7 +8,11 @@ describe("Stack", () => {
     stack = new Stack()
   })
 
-  it("has the correct starting property types and correct values", () => {
+  it("correctly exports class Stack", () => {
+    expect(stack).toBeInstanceOf(Stack)
+  })
+
+  it("has the correct starting values", () => {
     expect(stack.top).toBe(-1)
     expect(stack.items).toEqual({})
   })
@@ -30,15 +34,6 @@ describe("Stack", () => {
     expect(stack.top).toBe(1)
   })
 
-  it("peek() returns the last element on the stack", () => {
-    stack.push("Item 0")
-    expect(stack.peek()).toBe("Item 0")
-    stack.push("Item 1")
-    expect(stack.peek()).toBe("Item 1")
-    stack.pop()
-    expect(stack.peek()).toBe("Item 0")
-  })
-
   it("push() throws an error with the message 'Only strings allowed' when the argument is not a string", () => {
     expect(() => stack.push([])).toThrow("Only strings allowed")
     expect(() => stack.push(1)).toThrow("Only strings allowed")
@@ -48,5 +43,14 @@ describe("Stack", () => {
 
   it("pop() throws an error while trying to remove an element that doesn't exist", () => {
     expect(() => stack.pop()).toThrow("No elements to remove")
+  })
+
+  it("peek() returns the last element on the stack", () => {
+    stack.push("Item 0")
+    expect(stack.peek()).toBe("Item 0")
+    stack.push("Item 1")
+    expect(stack.peek()).toBe("Item 1")
+    stack.pop()
+    expect(stack.peek()).toBe("Item 0")
   })
 })

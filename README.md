@@ -5,12 +5,10 @@ npm i
 npm run test
 ```
 
-### Milestones:
-- [x] correctly exports class Stack
-- [ ] has a "top" property initialized as -1 that keeps track of the last index of the stack
-- [ ] has an "items" property initialized as an empty object
-- [ ] has a "push" method that pushes the element given as argument to the stack
-- [ ] the method "push" only allows strings as arguments
-- [ ] has a "pop" method that pops the last element of the stack
-- [ ] the method "pop" throws an error with the message "No elements to remove" when there are no elements to remove
-
+### UwU
+You have to simulate a Stack Data Structure without using arrays at all. Use the property **top** to keep track of the current index (the top of the stack). You must initialize it as -1 meaning that it doesn't  have any starting items. 
+Next, use the property **items** to store all the stack items. You must initialize it as an empty object.
+Finally, create the **push**, **pop** and **peek** methods with the following rules:
+- Push must only receive a **string** as an argument. If it is not a string, it throws an error saying "**Only strings allowed**"
+- Pop must remove the last item and return it. If there's nothing to remove, then it throws an error saying "**No elements to remove**"
+- Peek must only return the last item of the stack
