@@ -32,6 +32,7 @@ describe("Stack", () => {
   it("pop() correctly pops elements", () => {
     stack.push("Item 0")
     expect(stack.pop()).toBe("Item 0")
+    expect(stack.peek()).toBe("No elements left")
     expect(stack.top).toBe(-1)
     stack.push("Item 0")
     stack.push("Item 1")
@@ -63,5 +64,7 @@ describe("Stack", () => {
     expect(stack.items).toEqual({
       0: "Item 0"
     })
+    stack.pop()
+    expect(stack.peek()).toBe("No elements left")
   })
 })
